@@ -47,27 +47,35 @@ SELECT `name` FROM city WHERE `name` LIKE 'bor%';
 #
 #
 # 8: Get the cities with a name that contains the string "orto"
+SELECT * FROM city WHERE `name` LIKE '%orto%';
 #
 #
 # 9: Get the cities that has a population below 1000
+SELECT * FROM city WHERE population < 1000;
 #
 #
 # 10: Get the unique countrycodes from the cities that has a population below 1000
+SELECT countrycode FROM city WHERE population < 1000;
 #
 #
 # 11: Get the cities with the countrycode UKR that has more than 1000000 (one million) in population
+SELECT * FROM city WHERE countrycode = 'UKR' AND population > 1000000;
 #
 #
 # 12: Get the cities with a population of below 200 or above 9500000 (9.5 million)
+SELECT * FROM city WHERE population < 200 OR population > 9500000;
 #
 #
 # 13: Get the cities with the countrycodes TJK, MRT, AND, PNG, SJM
+SELECT * FROM city WHERE countrycode IN ('tjk', 'mrt', 'png', 'and', 'sjm');
 #
 #
 # 14: Get the cities with a population between 200 and 700 inclusive
+SELECT * FROM city WHERE population BETWEEN 200 AND 700;
 #
 #
 # 15: Get the countries with a population between 8000 and 20000 inclusive
+
 #
 #
 # 16: Get the name of the countries with a independence year (indepyear) before year 0
