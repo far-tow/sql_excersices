@@ -4,8 +4,7 @@
 use world; 
 #
 # 1: Get the cities with a name starting with ping sorted by their population with the least populated cities first
-
-#
+SELECT 
 #
 # 2: Get the cities with a name starting with ran sorted by their population with the most populated cities first
 #
