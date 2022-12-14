@@ -1,8 +1,10 @@
 # SQL Join exercise
 #
-
+-- just to be sure that right db is in use!
+use world; 
 #
 # 1: Get the cities with a name starting with ping sorted by their population with the least populated cities first
+
 #
 #
 # 2: Get the cities with a name starting with ran sorted by their population with the most populated cities first
