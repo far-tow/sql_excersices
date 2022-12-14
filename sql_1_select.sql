@@ -2,6 +2,8 @@
 #
 # World database layout:
 # To use this database from a default MySQL install, type: use world;
+-- Selecting the world db to work on first!
+USE world;
 #
 # Table: City
 # Columns: Id,Name,CountryCode,District,Population
@@ -19,22 +21,29 @@ SELECT "hello world" as message , 123 as id;
 #
 # 2: Get everything from the city table
 # (Hint: Many many rows)
+SELECT * FROM city;
 #
 #
 # 3: Get everything on the cities whose district is "aceh"
 # (Hint: 2 rows)
+SELECT * FROM city WHERE district = 'aceh';
 #
 #
 # 4: Get only the name of the cities where the countrycode is "bfa"
+SELECT * FROM city WHERE countrycode = 'bfa';
 #
 #
 # 5: Get both the name and district of the cities where the countrycode is "tto"
+SELECT `name` , district FROM city WHERE countrycode = 'tto';
 #
 #
 # 6: Get the name and district named as nm,dist from the cities where the countrycode is "arm"
+SELECT `name` AS nm, district AS dist FROM city WHERE countrycode = 'arm';
 #
 #
 # 7: Get the cities with a name that starts with "bor"
+SELECT `name` FROM city WHERE `name` LIKE 'bor%';
+
 #
 #
 # 8: Get the cities with a name that contains the string "orto"
