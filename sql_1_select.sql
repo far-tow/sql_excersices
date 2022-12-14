@@ -75,14 +75,18 @@ SELECT * FROM city WHERE population BETWEEN 200 AND 700;
 #
 #
 # 15: Get the countries with a population between 8000 and 20000 inclusive
-
+SELECT `name`, population FROM country WHERE population BETWEEN 800 AND 20000;
 #
 #
 # 16: Get the name of the countries with a independence year (indepyear) before year 0
+SELECT `name`, indepyear AS 'YEAR OF FREEDOM' FROM country WHERE indepyear < 0;
 #
 #
 # 17: Get the countries that has no recorded independence year and a population above 1000000
+-- adn testing to show message in Persian lang too :-)
+SELECT `name`, indepyear AS 'سال آزادی', population FROM country WHERE indepyear IS NULL AND population > 1000000;
 #
 #
 # 18: Get countries with a SurfaceArea below 10 and a defined LifeExpectancy
+SELECT `name`, SurfAcearea, LifeExpectancy FROM country WHERE surfacearea < 10 AND lifeexpectancy IS NOT NULL;
 #
