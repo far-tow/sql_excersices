@@ -17,7 +17,7 @@ USE world;
 #
 # 1: Get a query to return "Hello World", 123
 # (Hint: 1 row, 2 columns)
-SELECT "hello world" as message , 123 as id;
+SELECT 'hello world' as message , 123 as id;
 #
 # 2: Get everything from the city table
 # (Hint: Many many rows)
@@ -39,13 +39,13 @@ WHERE countrycode = 'bfa';
 #
 #
 # 5: Get both the name and district of the cities where the countrycode is "tto"
-SELECT `name` , district
+SELECT name , district
 FROM city
 WHERE countrycode = 'tto';
 #
 #
 # 6: Get the name and district named as nm,dist from the cities where the countrycode is "arm"
-SELECT `name` AS nm, district AS dist
+SELECT name AS nm, district AS dist
 FROM city
 WHERE countrycode = 'arm';
 #
